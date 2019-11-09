@@ -17,7 +17,7 @@ pipeline {
                 
                 ansiblePlaybook(
                     playbook: '/home/ec2-user/ansible/first_play.yml'
-                    
+                )    
             }
         }
     }
