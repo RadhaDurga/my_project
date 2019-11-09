@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy-package') {
             steps {
-                # sh 'ansible-playbook deploy_file.yml'
+                
                 ansiblePlaybook(
                     playbook: '/home/ec2-user/ansible/first_play.yml'
                     
