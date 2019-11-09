@@ -1,11 +1,21 @@
-node{
-    stage('SCM checkout'){
-    git' https://github.com/RadhaDurga/my_project'
+pipeline {
+    agent any
+
+    stages {
+        stage('scm checkout') {
+            steps {
+                git' https://github.com/RadhaDurga/my_project'
+            }
+        }
+        stage('complile-package') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('Deploy-package') {
+            steps {
+                sh ansible-playbook deploy_file.yml
+            }
+        }
     }
-    stage('complile-package'){
-    sh 'mvn clean package'
-    }
-    stage('Deploy-package'){
-    sh ansible-playbook deploy_file.yml
-    }      
-    }
+}
