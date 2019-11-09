@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: Copy file with owner and permissions
+      copy:
+        src: /home/ec2-user/ansible/folder1/sample.txt
+        dest: /home/ec2-user/ansible/folder/
+        owner: ec2-user
+        group: ec2-user
+        mode: '0644'
