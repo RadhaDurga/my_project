@@ -3,6 +3,6 @@ node{
     git' https://github.com/RadhaDurga/my_project'
     }
     stage('complile-package'){
-    sh 'mvn package'
+    sh 'mvn clean package'
     }
     }
