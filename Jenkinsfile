@@ -16,7 +16,7 @@ pipeline {
             steps {
                 
                 ansiblePlaybook(
-                    playbook: '/home/ec2-user/ansible/first_play.yml'
+                    playbook: 'deploy_fie.yml'
                 )    
             }
         }
