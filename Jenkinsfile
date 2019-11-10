@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy-package') {
             steps {
-                ansiblePlaybook installation: 'Ansible', playbook: 'deploy_file.yml'
+                ansiblePlaybook installation: 'Ansible', playbook: '${WORKSPACE}deploy_file.yml'
                  
             }
         }
