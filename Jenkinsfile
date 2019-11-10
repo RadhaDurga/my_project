@@ -14,10 +14,8 @@ pipeline {
         }
         stage('Deploy-package') {
             steps {
-                
-                ansiblePlaybook(
-                    playbook: 'deploy_fie.yml'
-                )    
+                ansiblePlaybook installation: 'Ansible', playbook: 'deploy_file.yml'
+                 
             }
         }
     }
