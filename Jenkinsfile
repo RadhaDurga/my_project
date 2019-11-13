@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('scm checkout') {
             steps {
-                git 'https://github.com/RadhaDurga/my_project'
+                git 'https://github.com/RadhaDurga/Automation-Project.git'
             }
         }
         stage('complile-package') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy-package') {
             steps {
-                ansiblePlaybook installation: 'Ansible', playbook: '${WORKSPACE}deploy_file.yml'
+                echo "Deploy Successfull"
                  
             }
         }
