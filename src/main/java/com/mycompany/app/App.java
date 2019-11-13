@@ -6,7 +6,7 @@ package com.mycompany.app;
 public class App
 {
 
-    private final String message = "Hello This is the deployment";
+    private final String message = "Hello This is the deployment - Version 1";
 
     public App() {}
 
